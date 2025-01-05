@@ -1,5 +1,5 @@
 {% set name = "axial-positional-embedding" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,21 +7,22 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/axial_positional_embedding-{{ version }}.tar.gz
-  sha256: 2f9fe133b454474976db2b8481b0872637f9ff144d205246f05ddd19bd8ff8f3
+  sha256: 9bcfb865beabdd5cb7f9979ed459121890cabb670244789b43574556071bad93
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools
+    - hatchling
     - pip
   run:
     - python >={{ python_min }}
-    - pytorch
+    - einops >=0.8.0
+    - pytorch >=2.0
 
 test:
   imports:
