@@ -1,5 +1,5 @@
 {% set name = "axial-positional-embedding" %}
-{% set version = "0.3.11" %}
+{% set version = "0.3.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/axial_positional_embedding-{{ version }}.tar.gz
-  sha256: 8c4ca5e45aa0da3c2c0b6cb2fa2a310cc278125c17701497a2e835bfaf3c0ad1
+  sha256: 10d98f342f8fa0d4d3d20b36ed27fb0fc63f1d398202b9165e07bc9d6130bc17
 
 build:
   noarch: python
